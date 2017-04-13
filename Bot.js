@@ -53,7 +53,7 @@ T.post('statuses/update', tweet, gotData);
 /*Post Tweet*/
 tweetIt();
 
-//set Interval(tweetIt, 1000*45);
+set Interval(tweetIt, 1000*45);
 function tweetIt() {
     //Find a random #1-100 and multiply by 100, and then round down.
     var r = Math.floor(Math.random() * 100);
@@ -71,7 +71,7 @@ function tweetIt() {
     }
 }
 //stream function
-/*
+
 followTweet();
 
 function followTweet() {
@@ -93,8 +93,8 @@ function followTweet() {
     }
 
 }
-*/
-/*function tweetIt2(txt){
+
+function tweetIt2(txt){
     
     var tweet = {
         status: txt
@@ -111,7 +111,7 @@ function followTweet() {
         }
     }
 }
-*/
+
 /*var exec = require('child_process').exec;
 var cmd = '"C:\Users\17reed.jacob\Desktop\P5ECS-Jacob\processing-3.3\processing-java.exe" --sketch="C:\Users\17reed.jacob\Desktop\P5ECS-Jacob\Lesson 20\circlesketch" --run';
 exec(cmd, processing);*/
