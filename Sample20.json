@@ -1,0 +1,29 @@
+{
+    "weapons": [
+    {
+        "name": "mastersword", 
+        "location": "water temple",
+        "red": 200,
+        "green": 200,
+        "blue": 0
+    },
+    {
+        "name": "master shield", 
+        "location": "hryule temple",
+        "red": 500,
+        "green": 20,
+        "blue": 200
+
+    },
+    {
+        "name": "potion",
+        "location": ["sky temple", "peach's castle"],
+        "red": 255,
+        "green": 0,
+        "blue": 0
+    }
+    ]
+
+}
+
+
