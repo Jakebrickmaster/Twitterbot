@@ -44,11 +44,11 @@ function gotData(err, data, response){
 }
 
 
-/*var tweet = { 
+var tweet = { 
   status: 'hello world!' 
 }
 T.post('statuses/update', tweet, gotData);
-*/
+
 
 /*Post Tweet*/
 tweetIt();
@@ -126,7 +126,7 @@ processing();
 function processing(eventMsg){
     
     //console.log('Finished Image!');
-    //var json - JOSN.stringify(eventMsg, null, 2);
+    //var json - JSON.stringify(eventMsg, null, 2);
    // fs.writeFile("#tweet.json", json);
 }
 */
