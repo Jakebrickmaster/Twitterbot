@@ -25,7 +25,7 @@ var T = new Twit({
 //  search twitter for all tweets containing the word 'banana' since July 11, 2011
 //
 
-/*var parameters = { 
+var parameters = { 
     q: 'apple since:2011-07-11', 
     count: 2,
     lang: 'en'
@@ -42,7 +42,7 @@ function gotData(err, data, response){
     
   
 }
-*/
+
 
 /*var tweet = { 
   status: 'hello world!' 
