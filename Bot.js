@@ -24,7 +24,7 @@ var T = new Twit({
 //
 //  search twitter for all tweets containing the word 'banana' since July 11, 2011
 //
-
+/*
 var parameters = { 
     q: 'apple since:2011-07-11', 
     count: 2,
@@ -48,12 +48,12 @@ var tweet = {
   status: 'hello world!' 
 }
 T.post('statuses/update', tweet, gotData);
-
+*/
 
 /*Post Tweet*/
 tweetIt();
 
-set Interval(tweetIt, 1000*45);
+//set Interval(tweetIt, 1000*45);
 function tweetIt() {
     //Find a random #1-100 and multiply by 100, and then round down.
     var r = Math.floor(Math.random() * 100);
@@ -85,9 +85,9 @@ function followTweet() {
         var name = eventMsg.source.name;
         var screenName = eventMsg.source.screen_name;
         
-        tweetIt2('@'+screenName + ' Hello there.');
+        tweetIt2('@' + screenName + ' Hello there.');
         
-        console.log('Finished Tweet Json!');
+        console.log('Finished Tweet Json');
         var json = JSON.stringify(eventMsg, null, 2);
         fs.writeFile("#tweet.json", json);
     }
