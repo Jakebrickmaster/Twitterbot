@@ -1,5 +1,5 @@
 var txt;
-function preoload(){
+function preload(){
     txt = loadStrings("Greetings.txt");
 }
 //Tells our console the bot is starting
