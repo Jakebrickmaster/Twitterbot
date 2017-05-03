@@ -1,6 +1,6 @@
 var txt;
 function preoload(){
-    txt = load Strings("Greetings.txt");
+    txt = loadStrings("Greetings.txt");
 }
 //Tells our console the bot is starting
 console.log("The Bot is Starting Now!");
