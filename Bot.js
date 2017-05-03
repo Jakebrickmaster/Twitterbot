@@ -1,3 +1,7 @@
+var txt;
+function preoload(){
+    txt = load Strings("Greetings.txt");
+}
 //Tells our console the bot is starting
 console.log("The Bot is Starting Now!");
 
@@ -130,5 +134,7 @@ function processing(eventMsg){
    // fs.writeFile("#tweet.json", json);
 }
 */
-
-
+picking();
+function picking() {
+    
+}
