@@ -1,6 +1,7 @@
-var txt;
+var texts;
+var randquote;
 function preload(){
-    txt = loadStrings("Greetings.txt");
+    texts = loadStrings("Greetings.txt");
 }
 //Tells our console the bot is starting
 console.log("The Bot is Starting Now!");
@@ -88,8 +89,9 @@ function followTweet() {
     function followed(eventMsg){
         var name = eventMsg.source.name;
         var screenName = eventMsg.source.screen_name;
+        picking();
         
-        tweetIt2('@' + screenName + ' Hello there.');
+        tweetIt2('@' + screenName + randquote);
         
         console.log('Finished Tweet Json');
         var json = JSON.stringify(eventMsg, null, 2);
@@ -136,5 +138,6 @@ function processing(eventMsg){
 */
 picking();
 function picking() {
-    
+    randquote = random(texts);
+    console.log(randquote);
 }
