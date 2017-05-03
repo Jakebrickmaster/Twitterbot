@@ -91,7 +91,7 @@ function followTweet() {
         var screenName = eventMsg.source.screen_name;
         picking();
         
-        tweetIt2('@' + screenName + randquote);
+        tweetIt2('@' + screenName);
         
         console.log('Finished Tweet Json');
         var json = JSON.stringify(eventMsg, null, 2);
@@ -103,7 +103,7 @@ function followTweet() {
 function tweetIt2(txt){
     
     var tweet = {
-        status: txt
+        status: txt + randquote
     }
     
     T.post('statuses/update', tweet, tweeted);
