@@ -1,14 +1,23 @@
+
+
 var texts;
 var randquote;
-function preload(){
-    texts = loadStrings("Greetings.txt");
-}
+
+
 //Tells our console the bot is starting
 console.log("The Bot is Starting Now!");
 
 //Require twit package
 var Twit = require('twit');
+var fs = require('fs');
 
+preload();
+function preload(){
+    var text = fs.readFileSync("./Greetings.txt");
+    console.log(text);
+    texts = text.split(" ");
+    picking();
+}
 //We need to authemticate our twitter
 
 var T = new Twit({
@@ -83,7 +92,7 @@ function followTweet() {
 
     var stream = T.stream('user');
     //anytime I gain a follower
-
+    picking();
     stream.on('follow', followed);
     
     function followed(eventMsg){
@@ -91,7 +100,7 @@ function followTweet() {
         var screenName = eventMsg.source.screen_name;
         picking();
         
-        tweetIt2('@' + screenName);
+        tweetIt2('@' + screenName + randquote);
         
         console.log('Finished Tweet Json');
         var json = JSON.stringify(eventMsg, null, 2);
@@ -103,7 +112,7 @@ function followTweet() {
 function tweetIt2(txt){
     
     var tweet = {
-        status: txt + randquote
+        status: txt
     }
     
     T.post('statuses/update', tweet, tweeted);
@@ -136,8 +145,8 @@ function processing(eventMsg){
    // fs.writeFile("#tweet.json", json);
 }
 */
-picking();
+
 function picking() {
-    randquote = random(texts);
+    randquote = texts[Math.floor(Math.random() * texts.length)];
     console.log(randquote);
 }
