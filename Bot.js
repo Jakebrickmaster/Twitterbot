@@ -10,12 +10,14 @@ console.log("The Bot is Starting Now!");
 //Require twit package
 var Twit = require('twit');
 var fs = require('fs');
-
+//comment
 preload();
 function preload(){
-    var text = fs.readFileSync("./Greetings.txt");
-    console.log(text);
-    texts = text.split(" ");
+
+texts = fs.readFileSync("Greetings.txt", "utf8").toString().split("\n");  
+
+    console.log(texts);
+    
     picking();
 }
 //We need to authemticate our twitter
@@ -100,7 +102,7 @@ function followTweet() {
         var screenName = eventMsg.source.screen_name;
         picking();
         
-        tweetIt2('@' + screenName + randquote);
+        tweetIt2('.@' + screenName + " " + randquote);
         
         console.log('Finished Tweet Json');
         var json = JSON.stringify(eventMsg, null, 2);
